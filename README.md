@@ -18,7 +18,7 @@ Quality metrics : expected_mortality, risk_adj_mortality_index, benchmark_los, l
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
  
 
-Dashboard  — Executive Clinical Overview  link : https://public.tableau.com/views/PatientOutcomesClinicalQualityAnalytics/HospitalOperationsandFinancialAnalytics?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+Dashboard  — Executive Clinical Overview  Link : https://public.tableau.com/views/PatientOutcomesClinicalQualityAnalytics/HospitalOperationsandFinancialAnalytics?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
           Calculated Fields :
 
@@ -75,11 +75,6 @@ YoY Mortality Change
 
 (SUM([mortality_flag]) / COUNT([case_id]))
 LOOKUP(SUM([mortality_flag]) / COUNT([case_id]), -12)
-
-Date Range Filter
-
-[surgery_date] >= [Start Date]
-AND [surgery_date] <= [End Date]
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
