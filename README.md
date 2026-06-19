@@ -23,49 +23,61 @@ Dashboard  — Executive Clinical Overview
           Calculated Fields :
 
 
-[Mortality Rate %]
+Mortality Rate %
+
 SUM([mortality_flag]) / COUNT([case_id]) * 100
 
-[Complication Rate %]
+Complication Rate %
+
 SUM([complication_flag]) / COUNT([case_id]) * 100
 
-[Risk-Adjusted Mortality Index]
+Risk-Adjusted Mortality Index
+
 SUM([mortality_flag]) / NULLIF(SUM([expected_mortality]), 0)
 
-[SSI Rate per 1000]
+[SSI Rate per 1000
+
 SUM([ssi_flag]) / COUNT([case_id]) * 1000
 
-[30-Day Readmission Rate %]
+30-Day Readmission Rate %
+
 SUM([readmission_30d]) / COUNT([case_id]) * 100
 
-[ICU Admission Rate %]
+ICU Admission Rate %
+
 SUM([icu_admission]) / COUNT([case_id]) * 100
 
-[Avg Length of Stay]
+Avg Length of Stay
+
 AVG([length_of_stay_days])
 
-[LOS vs Benchmark]
+LOS vs Benchmark
+
 AVG([length_of_stay_days]) - AVG([benchmark_los])
 
- [Mortality Index Status]
+ Mortality Index Status
+ 
 IF [Risk-Adjusted Mortality Index] > 1.20 THEN "High Risk"
 ELSEIF [Risk-Adjusted Mortality Index] > 1.00 THEN "Above Expected"
 ELSEIF [Risk-Adjusted Mortality Index] < 0.80 THEN "Excellent"
 ELSE "As Expected"
 END
 
-[Quality Score Tier]
+Quality Score Tier
+
 IF [quality_score] >= 90 THEN " Excellent"
 ELSEIF [quality_score] >= 75 THEN " Good"
 ELSEIF [quality_score] >= 60 THEN " Needs Improvement"
 ELSE " Critical"
 END
 
-[YoY Mortality Change]
+YoY Mortality Change
+
 (SUM([mortality_flag]) / COUNT([case_id]))
 LOOKUP(SUM([mortality_flag]) / COUNT([case_id]), -12)
 
-[Date Range Filter]
+Date Range Filter
+
 [surgery_date] >= [Start Date]
 AND [surgery_date] <= [End Date]
 
@@ -74,31 +86,35 @@ AND [surgery_date] <= [End Date]
 Dashboard  — Operations & Financial 
 
 
-[Avg Case Cost INR]
+Avg Case Cost INR
 
 AVG([actual_cost_inr])
 
-[Insurance Coverage Rate %]
+Insurance Coverage Rate %
+
 SUM([insurance_covered_inr]) / NULLIF(SUM([actual_cost_inr]), 0) * 100
 
-[Avg Out-of-Pocket INR]
+Avg Out-of-Pocket INR
 
 AVG([out_of_pocket_inr])
 
-[Cost vs Complexity Index]
+Cost vs Complexity Index
 
 AVG([actual_cost_inr]) / NULLIF(AVG([case_complexity_score]), 0)
 
- [Emergency vs Elective Label]
+ Emergency vs Elective Label
+ 
 IF [emergency_case] = 1
 THEN "Emergency"
 ELSE "Elective"
 END
 
-[ICU Utilisation Rate %]
+ICU Utilisation Rate %
+
 SUM([icu_admission]) / COUNT([case_id]) * 100
 
-[Avg ICU Days]
+Avg ICU Days
+
 AVG([icu_days])
 
 
