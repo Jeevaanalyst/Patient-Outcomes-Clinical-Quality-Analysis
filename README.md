@@ -85,7 +85,7 @@ AND [surgery_date] <= [End Date]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Dashboard  — Operations & Financial 
+Dashboard  — Operations & Financial Analytics 
 
 
   Calculated Fields :
