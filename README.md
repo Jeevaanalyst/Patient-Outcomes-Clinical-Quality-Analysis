@@ -18,7 +18,7 @@ Quality metrics : expected_mortality, risk_adj_mortality_index, benchmark_los, l
 
  
 
-Dashboard  — Executive Clinical Overview 
+Dashboard  — Executive Clinical Overview  link : https://public.tableau.com/views/PatientOutcomesClinicalQualityAnalytics/HospitalOperationsandFinancialAnalytics?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
           Calculated Fields :
 
@@ -35,7 +35,7 @@ Risk-Adjusted Mortality Index
 
 SUM([mortality_flag]) / NULLIF(SUM([expected_mortality]), 0)
 
-[SSI Rate per 1000
+SSI Rate per 1000
 
 SUM([ssi_flag]) / COUNT([case_id]) * 1000
 
@@ -83,7 +83,13 @@ AND [surgery_date] <= [End Date]
 
 
 
+
+
 Dashboard  — Operations & Financial 
+
+
+
+
 
 
 Avg Case Cost INR
