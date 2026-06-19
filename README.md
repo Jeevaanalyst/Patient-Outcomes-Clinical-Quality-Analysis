@@ -15,7 +15,7 @@ Financials : actual_cost_inr, insurance_type, insurance_covered_inr, out_of_pock
 
 Quality metrics : expected_mortality, risk_adj_mortality_index, benchmark_los, los_vs_benchmark, benchmark_complication_rate, benchmark_mortality_index, benchmark_ssi_rate, quality_score
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
  
 
 Dashboard  — Executive Clinical Overview  link : https://public.tableau.com/views/PatientOutcomesClinicalQualityAnalytics/HospitalOperationsandFinancialAnalytics?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
@@ -82,7 +82,7 @@ Date Range Filter
 AND [surgery_date] <= [End Date]
 
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Dashboard  — Operations & Financial 
